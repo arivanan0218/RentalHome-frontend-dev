@@ -1,0 +1,95 @@
+.blog-details {
+    max-width: 80%; 
+    margin: 100px auto 0 auto; 
+    padding: 20px;
+  }
+  
+  .blog-details article {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .blog-details h4 {
+    font-size: 25px; 
+    margin-bottom: 10px;
+  }
+  
+  .blog-details p {
+    font-size: 16px; 
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .blog-details .dis, .address {
+    font-weight: bold;
+  }
+  
+  .blog-details .btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .blog-details .btn a {
+    margin-right: 50px; 
+  }
+  
+  .blog-details .btn button,
+  .blog-details .btn .button {
+    font-size: 14px;
+    margin-top: 7px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #D741AC, #7D36E1);
+    padding: 4px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .blog-details .btn button + .button {
+    margin-left: 10px; 
+  }
+  
+  
+  .blog-details .btn button:hover,
+  .blog-details .btn .button:hover {
+    background: linear-gradient(90deg, #7D36E1, #D741AC);
+  }
+
+  /* btn1 */
+
+  .blog-details .btn1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .blog-details .btn1 a {
+    margin-right: 100px; 
+  }
+  
+  .blog-details .btn1 button,
+  .blog-details .btn1 .button {
+    font-size: 14px;
+    margin-top: 7px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #D741AC, #7D36E1);
+    padding: 4px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .blog-details .btn1 button + .button {
+    margin-left: 50px; 
+  }
+  
+  
+  .blog-details .btn1 button:hover,
+  .blog-details .btn1 .button:hover {
+    background: linear-gradient(90deg, #7D36E1, #D741AC);
+  }
+  
