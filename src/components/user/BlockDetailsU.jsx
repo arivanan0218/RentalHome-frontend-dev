@@ -159,5 +159,3 @@ const BlogDetailsU = () => {
 };
 
 export default BlogDetailsU;
-
-//testing
