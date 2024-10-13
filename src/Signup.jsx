@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import qs from 'qs'; // Import qs to handle URL-encoded data
 import './Login.css';
 import Logo from "../src/assets/icons/HomeLogo.png";
 
@@ -9,6 +8,8 @@ const Signup = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [firstName, setFirstName] = useState(''); // New state for first name
+    const [lastName, setLastName] = useState(''); // New state for last name
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
@@ -28,6 +29,8 @@ const Signup = () => {
                 {
                     username: username,
                     email: email,
+                    firstName: firstName, // Include first name
+                    lastName: lastName,   // Include last name
                     enabled: true,
                     credentials: [
                         {
@@ -47,8 +50,7 @@ const Signup = () => {
 
             if (response.status === 201) {
                 setSuccess('User registered successfully!');
-                // Optionally redirect to login or dashboard after successful signup
-                navigate('/login'); // Change this if you want a different redirect
+                navigate('/login'); // Redirect to login or dashboard
             } else {
                 setError('Failed to register user.');
             }
@@ -62,11 +64,19 @@ const Signup = () => {
             <img src={Logo} alt="Logo" className="signin-logo" />
             <p>Our user-friendly platform makes arranging cost-effective shared journeys simple and <br/>secure. Join today and start collaborating on your travels!</p>
             <form onSubmit={handleSignup} className='signup-form'>
+                
                 <input
                     type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="First Name" // New input for first name
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                />
+                <input
+                    type="text"
+                    placeholder="Last Name" // New input for last name
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     required
                 />
                 <input
@@ -74,6 +84,13 @@ const Signup = () => {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                     required
                 />
                 <input
