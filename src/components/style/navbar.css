@@ -21,8 +21,18 @@
     /* margin-left: 10px; */
   }
   
+  .navbar .logo {
+    height: 30px;
+    width: auto;
+  }
   
-  .navbar .links {
+  .navbar .logo1 {
+    height: 40px;
+    width: auto;
+  }
+
+  .navbar .nav-links {
+    margin-right: 110px;
     display: flex;
     justify-content: center;
     flex-grow: 1; 
@@ -77,3 +87,4 @@
     text-decoration: none;
     padding: 6px;
   }
+

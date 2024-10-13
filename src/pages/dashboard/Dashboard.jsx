@@ -2,6 +2,7 @@ import axios from '../../axiosConfig';
 import { useNavigate, Link } from "react-router-dom"; 
 import React, { useEffect, useState } from 'react';
 import Add from "../../assets/icons/Add.png";
+import Home from "../../assets/icons/Home.com.png"
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -34,7 +35,7 @@ const Dashboard = () => {
       <div className="travel-container-top">
       <Link to="/home">
         <button>
-          <img src={Add} alt="Add" />
+          <img src={Home} alt="Add" />
         </button>
         </Link>
         <h1 className="title">

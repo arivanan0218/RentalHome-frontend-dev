@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from "../../assets/icons/HomeLogo.png"
 import '../style/footer.css'
 
 const Footer = () => {
@@ -6,7 +7,8 @@ const Footer = () => {
         <div className="footer-main">
         <div className="footer">
             <div className="logo">
-                <h1>HOME</h1>
+                {/* <h1>HOME</h1> */}
+                <img src={Logo} alt="Logo" className="signin-logo" />
                 <p>Search your boarding here</p>
             </div>
             <div className="main-links">

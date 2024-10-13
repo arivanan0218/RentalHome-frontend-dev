@@ -78,6 +78,9 @@ import { useState } from 'react';
 import PrivateRoute from './PrivateRoute';
 import Login from './Login';
 import Signup from './Signup';
+import Logout from './Logout';
+import About from './pages/AboutPage/About';
+import ScrollToTop from './ScrollToTop';
 
 const App = () => {
     const [userType, setUserType] = useState(null);
@@ -93,18 +96,21 @@ const App = () => {
         <div className="App">
             {/* Conditionally render Header based on the route */}
             {/* {location.pathname !== '/dashboard' && <Header userType={userType} />} */}
-            {location.pathname !== '/dashboard' && location.pathname !== '/'  && location.pathname !== '/login' && <Header userType={userType} />}
-            
+            {location.pathname !== '/dashboard' && location.pathname !== '/'  && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Header userType={userType} />}
+            <ScrollToTop />
             <div className="content">
                 <Routes>
                     <Route path='/signup' element={<Signup />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path='/logout' element={<Logout />} />
                     <Route exact path="/" element={<LandingPage />} />
                     <Route exact path="/home" element={<HomeU />} />
                     <Route path="/create" element={<Create />} />
                     <Route path="/blogs/:id" element={<BlogDetails />} />
                     <Route path="/home/blogs/:id" element={<BlogDetailsU />} />
                     <Route path="/update/:id" element={<Update />} />
+                    <Route path='/about'    element={<About />} />
+                    {/* <Route path='/contact' element={<ContactPage />} /> */}
                     <Route
                         path="/dashboard" 
                         element={
@@ -117,7 +123,7 @@ const App = () => {
                     <Route path='/login' element={<Login />} /> */}
                 </Routes>
             </div>
-            {location.pathname !== '/dashboard' && location.pathname !== '/' && location.pathname !== '/login' && <Footer userType={userType} />}
+            {location.pathname !== '/dashboard' && location.pathname !== '/' && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Footer userType={userType} />}
         </div>
     );
 };

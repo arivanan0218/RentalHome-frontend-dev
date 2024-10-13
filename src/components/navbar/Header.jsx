@@ -1,19 +1,23 @@
 import React from 'react';
 import './Header.css';
 import Logo1 from "../../assets/icons/HomeLogo.png";
+import Logout from "../../assets/icons/Logout.png";
 import { Link } from 'react-router-dom';
 
 const Header = ({ userType }) => {
   return (
     <header className="navbar">
-      <img src={Logo1} alt="Logo" className="logo" />
+      <Link to="/home">
+       <img src={Logo1} alt="Logo" className="logo" />
+      </Link>
+      
       <nav className="nav-links">
         {userType === 'SUPPLIER' ? (
           <Link to="/dashboard">Dashboard</Link>
         ) : (
           <>
             <Link to="/home">Home</Link>
-            <Link to="/services">Services</Link>
+            {/* <Link to="/contact">Contact</Link> */}
             <Link to="/about">About</Link>
           </>
         )}
@@ -29,11 +33,11 @@ const Header = ({ userType }) => {
             </Link>
           </>
         )}
-        {/* {userType && (
+        {userType && (
           <Link to="/logout">
-            <button className="auth-button">Logout</button>
+            <img src={Logout} alt="Logo" className="logo1" />
           </Link>
-        )} */}
+        )}
       </div>
     </header>
   );

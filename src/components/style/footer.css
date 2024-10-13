@@ -1,5 +1,5 @@
 .footer-main {
-    margin-top: 70px;
+    margin-top: 250px;
     color: #333;
     font-family: Arial, sans-serif;
     border-top: 1px solid #5b6166;
@@ -16,19 +16,22 @@
   
   .footer .logo {
     margin-top: 30px;
-    margin-left: 160px;
+    margin-left: 150px;
+    /* background-color: aqua; */
+    height: 200px;
+    width: 200px;
+  }
+
+  .footer .logo img {
+    height: 100px;
+    width: auto;
   }
   
-  .footer .logo h1 {
-    font-size: 40px;
-    background: linear-gradient(90deg, #D741AC, #7D36E1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
   
   .footer .logo p {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 100%;
     color: #fff;
   }
   

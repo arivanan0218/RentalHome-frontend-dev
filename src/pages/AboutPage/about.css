@@ -1,0 +1,254 @@
+.about-page {
+    padding: 0;
+    margin: 70px 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-img-container {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-header h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    padding-top: 8%;
+}
+
+.about-firstImage {
+    margin-top: 42px;
+    width: 1240px;
+    height: auto;
+}
+
+.about-content-section-1,
+.about-content-section-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-content-1,
+.text-content-2 {
+    color: #172554;
+    font-size: 15px;
+}
+
+.text-content-1 p,
+.text-content-2 p {
+    margin-top: 202px;
+    width: 401px;
+    height: 184px;
+    color: #fff;
+}
+
+.img-content-1,
+.img-content-2 {
+    flex: 0 0 362px; 
+    height: 368px; 
+    margin-top: 110px; 
+}
+
+.last-image {
+    width: 100%;
+    height: auto;
+    margin-top: 122px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-overlay,
+.logo-overlay1,
+.logo-overlay2,
+.logo-overlay3 {
+    position: absolute;
+    transition: opacity 0.4s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+}
+
+.logo-overlay,
+.logo-overlay3 {
+    width: 112px !important;
+    height: auto !important;
+}
+
+.logo-overlay1,
+.logo-overlay2 {
+    width: 59px !important;
+    height: auto !important;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: #172554;
+    cursor: pointer;
+}
+
+.hover-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    padding: 10px;
+}
+
+.hover-overlay-text h3,
+.hover-overlay-text h2,
+.hover-overlay-text p {
+    margin: 0;
+}
+
+.hover-overlay-text h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.hover-overlay-text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.hover-overlay-text p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.image-container:hover .hover-overlay {
+    opacity: 0.83;
+}
+
+.image-container:hover .logo-overlay,
+.image-container:hover .logo-overlay1,
+.image-container:hover .logo-overlay2,
+.image-container:hover .logo-overlay3 {
+    opacity: 0;
+}
+
+@media (max-width: 450px) {
+    .about-page {
+        margin: 0;
+        padding:  0 5% 0 5%;
+    }
+
+    .about-header h2 {
+        padding-top: 5%;
+
+        color: #172554;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .about-firstImage {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-overlay,
+    .logo-overlay3 {
+        width: 30px !important;
+        height: auto !important;
+    }
+
+    .logo-overlay1,
+    .logo-overlay2 {
+        width: 29.5px !important;
+        height: auto !important;
+    }
+
+    .small-img-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .img-content-1,
+    .img-content-2 {
+    flex: 0 0 170px; 
+    height: 165.5px; 
+    margin-top: 50px; 
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+   
+.text-content-1 p,
+.text-content-2 p {
+    padding: 5%;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.about-content-section-1,
+.about-content-section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content-1,
+.text-content-2 {
+    color: #172554;
+    font-size: 12px;
+}
+
+.hover-overlay-text h2 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+}
+
+.hover-overlay-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hover-overlay-text p {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.last-image{
+    margin-top: 50px;
+}
+    
+}
