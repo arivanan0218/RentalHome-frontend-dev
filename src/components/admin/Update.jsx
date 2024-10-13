@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../style/create.css'
 import axios from '../../axiosConfig';
+import Logo from "../../assets/icons/HomeLogo.png";
+import { Link } from 'react-router-dom';
 
 const Update = () => {
     const [image, setImage] = useState('');
@@ -49,72 +51,71 @@ const Update = () => {
     };
 
     return (
-        <div className="create">
-            <div className="create-container">
+        <div className="create-container">
+    <div className="create-form">
+    <Link to="/dashboard"> <button className="close-button1">×</button></Link>
+    <img src={Logo} alt="Logo" className="signin-logo" />
+    <form onSubmit={handleSubmit} className="form">
 
-            <h1>HOME</h1>
-            <form onSubmit={handleSubmit}>
-                {/* <label>Title: </label> */}
-                <input 
-                    type="text"
-                    placeholder='Enter the name of the home'
-                    required
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
+        <input 
+            type="text"
+            placeholder='Enter the name of the home'
+            required
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="input-field"
+        />
 
-                {/* <label>Image: </label> */}
-                <input 
-                    type="text"
-                    placeholder='Enter the image URL'
-                    value={image}
-                    required
-                    onChange={(e) => setImage(e.target.value)}
-                />
+        <input 
+            type="text"
+            placeholder='Enter the image URL'
+            required
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            className="input-field"
+        />
 
-                {/* <label>Price: </label> */}
-                <input 
-                    type="number"
-                    placeholder='Enter the price of the home'
-                    required
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                />
-          
-                {/* <label>Capacity: </label> */}
-                <input 
-                    type="number"
-                    placeholder='Enter the capacity of the home'
-                    required
-                    value={capacity}
-                    onChange={(e) => setCapacity(e.target.value)}
-                />
+        <input 
+            type="number"
+            placeholder='Enter the price of the home'
+            required
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="input-field"
+        />
+  
+        <input 
+            type="number"
+            placeholder='Enter the capacity of the home'
+            required
+            value={capacity}
+            onChange={(e) => setCapacity(e.target.value)}
+            className="input-field"
+        />
 
-                {/* <label>Body: </label> */}
-                <textarea
-                    placeholder='Enter the description of the home'
-                    required
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                ></textarea>
+        <textarea
+            placeholder='Enter the description of the home'
+            required
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+            className="textarea-field"
+        ></textarea>
 
-                {/* <label>Address: </label> */}
-                <input 
-                    type="text"
-                    placeholder='Enter the address of the home'
-                    required
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                />
+        <input 
+            type="text"
+            placeholder='Enter the address of the home'
+            required
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            className="input-field"
+        />
 
-            
-            
+        {!isPending && <button className="submit-button">Update Home</button>}
+        {isPending && <button className="submit-button" disabled>Updating Home...</button>}
+    </form>
+    </div>
+</div>
 
-                {!isPending && <button>Update Home</button>}
-                {isPending && <button disabled>Updating Home...</button>}
-            </form>
-            </div>
-        </div>
     );
 };
 

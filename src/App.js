@@ -96,7 +96,7 @@ const App = () => {
         <div className="App">
             {/* Conditionally render Header based on the route */}
             {/* {location.pathname !== '/dashboard' && <Header userType={userType} />} */}
-            {location.pathname !== '/dashboard' && location.pathname !== '/'  && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Header userType={userType} />}
+            {location.pathname !== '/dashboard' && location.pathname !== '/create' && !location.pathname.startsWith('/update/') && location.pathname !== '/'  && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Header userType={userType} />}
             <ScrollToTop />
             <div className="content">
                 <Routes>
@@ -123,7 +123,7 @@ const App = () => {
                     <Route path='/login' element={<Login />} /> */}
                 </Routes>
             </div>
-            {location.pathname !== '/dashboard' && location.pathname !== '/' && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Footer userType={userType} />}
+            {location.pathname !== '/dashboard' && location.pathname !== '/create' && !location.pathname.startsWith('/update/') && location.pathname !== '/' && location.pathname !== '/login' && location.pathname !== '/signup' && !location.pathname.startsWith('/home/blogs/')  && <Footer userType={userType} />}
         </div>
     );
 };

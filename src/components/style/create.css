@@ -1,93 +1,106 @@
-.create {
-
-  width: 100%;
+.create-container {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  /* height: 1016px; */
-  
-  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 5% 2% 5%;
+  width: 760px;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 20px;
+  background: #1D1D1D;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.10);
+  margin: 60px auto;
+}
 
+.create-container .signin-logo {
+  height: 150px;
+  width: auto;
+  margin: 0px 100px 50px 100px;
+}
 
+.create-container .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  .create .create-container {
-    width: 760px;
-height: auto;
-margin-top: 200px;
-flex-shrink: 0;
-border-radius: 20px;
-background: #1D1D1D;
-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.10);
-    padding: 30px;
-    
-    /* margin-top: 20px; */
-  }
+.input-field,
+.textarea-field {
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 600px; /* Adjusted width */
+  height: 65px; /* Default height for input */
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  opacity: 0.5;
+  color: #FFF;
+  font-size: 16px;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
 
-  .create .create-container .signin-logo {
-    width: 369px;
-height: 135px;
-flex-shrink: 0;
-margin: 30px 0 50px 180px;
-  }
-  
-  .create .create-container h1 {
-    color: #FFF;
-    text-align: center;
-    font-size: 125px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
-  
-  .create form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .create input[type="text"],
-  .create input[type="number"],
-  .create textarea {
-    width: 75%;
-height: 65px;
-flex-shrink: 0;
-border-radius: 15px;
-border: 1px solid #FFF;
-opacity: 0.5;
-background-color: transparent;
-margin-bottom: 30px;
+.textarea-field {
+  height: 150px; /* Adjusted height for textarea */
+  resize: none; /* Prevent resizing if you want to keep it consistent */
+}
 
-  }
-  
-  .create textarea, input[type="text"], input[type="number"] {
-    color: #FFF;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    opacity: 0.5;
-  }
-    
-  .create button {
-  margin-top: 30px;
-    width: 75%;
-height: 60px;
-flex-shrink: 0;
-border-radius: 15px;
-background: linear-gradient(90deg, #F36EB6 0%, #8631ED 100%);
-color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-cursor: pointer;
-  }
-  
-  .create button:hover {
-    background: linear-gradient(90deg, #7D36E1, #D741AC); 
-  }
-  
-  
+.input-field::placeholder,
+.textarea-field::placeholder {
+  color: #FFF;
+  opacity: 0.7;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  opacity: 1;
+  border-color: #F36EB6;
+  outline: none;
+}
+
+.submit-button {
+  margin-top: 15px;
+  width: 600px; /* Adjusted width for buttons */
+  height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #F36EB6 0%, #8631ED 100%);
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Hide number input arrows in WebKit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Remove default appearance */
+  margin: 0; /* Remove margin */
+}
+
+/* Hide number input arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Use textfield appearance */
+}
+
+.create-form{
+  position: relative;
+}
+
+.create-form .close-button1 {
+  position: absolute;
+  top: -90px;   /* Adjust this value to move the button vertically */
+  right: -80px; /* Adjust this value to move the button horizontally */
+  background: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: #fff; /* White color */
+  font-size: 50px; /* Size of the close icon */
+  cursor: pointer; /* Pointer cursor */
+  outline: none; /* Remove outline on focus */
+  transition: color 0.3s; /* Smooth color transition */
+  border: #ddd;
+}

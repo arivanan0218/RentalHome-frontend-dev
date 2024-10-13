@@ -62,7 +62,7 @@ const Signup = () => {
     return (
         <div className="signup-container">
             <img src={Logo} alt="Logo" className="signin-logo" />
-            <p>Our user-friendly platform makes arranging cost-effective shared journeys simple and <br/>secure. Join today and start collaborating on your travels!</p>
+            <p>Our user-friendly platform makes finding affordable rental homes simple and secure. <br />Join today and start your search for the perfect boarding!</p>
             <form onSubmit={handleSignup} className='signup-form'>
                 
                 <input
