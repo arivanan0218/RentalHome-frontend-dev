@@ -10,6 +10,7 @@
   }
 
 
+
   .create .create-container {
     width: 760px;
 height: auto;
@@ -19,7 +20,15 @@ border-radius: 20px;
 background: #1D1D1D;
 box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.10);
     padding: 30px;
+    
     /* margin-top: 20px; */
+  }
+
+  .create .create-container .signin-logo {
+    width: 369px;
+height: 135px;
+flex-shrink: 0;
+margin: 30px 0 50px 180px;
   }
   
   .create .create-container h1 {

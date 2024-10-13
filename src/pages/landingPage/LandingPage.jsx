@@ -9,8 +9,8 @@ const LandingPage = () => {
       <p>Centralize all your boarding houses into one convenient location to streamline management and provide easy access for both administrators and residents, enhancing overall efficiency and organization.</p>
       <div className="button-container">
 
-        <Link to="/login"><button className='traveler-button'>Login</button></Link>     
-        <Link to="/home"><button className='driver-button'>Homes</button></Link>
+        <Link to="/signup"><button className='traveler-button'>Signup</button></Link>     
+        <Link to="/login"><button className='driver-button'>Signin</button></Link>
         
       </div>
     </div>

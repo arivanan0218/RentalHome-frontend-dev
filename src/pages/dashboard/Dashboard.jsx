@@ -32,6 +32,11 @@ const Dashboard = () => {
   return (
     <div className="travel">
       <div className="travel-container-top">
+      <Link to="/home">
+        <button>
+          <img src={Add} alt="Add" />
+        </button>
+        </Link>
         <h1 className="title">
           Add My Own <span>Homes</span>
         </h1>

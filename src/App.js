@@ -77,6 +77,7 @@ import Header from './components/navbar/Header';
 import { useState } from 'react';
 import PrivateRoute from './PrivateRoute';
 import Login from './Login';
+import Signup from './Signup';
 
 const App = () => {
     const [userType, setUserType] = useState(null);
@@ -96,6 +97,7 @@ const App = () => {
             
             <div className="content">
                 <Routes>
+                    <Route path='/signup' element={<Signup />} />
                     <Route path="/login" element={<Login />} />
                     <Route exact path="/" element={<LandingPage />} />
                     <Route exact path="/home" element={<HomeU />} />

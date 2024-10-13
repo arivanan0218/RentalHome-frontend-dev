@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import qs from 'qs'; // Import qs to handle URL-encoded data
 import "./Login.css";
+import Logo from "../src/assets/icons/HomeLogo.png";
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -62,6 +63,7 @@ const Login = () => {
 
     return (
         <div className="signup-container">
+            <img src={Logo} alt="Logo" className="signin-logo" />
              <p>Our user-friendly platform makes arranging cost-effective shared journeys simple and <br/>secure. Join today and start collaborating on your travels!</p>
             <form onSubmit={handleSubmit} className="signup-form">
                 <div>

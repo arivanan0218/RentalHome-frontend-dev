@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/create.css'
 import axios from '../../axiosConfig';
+import Logo from "../../assets/icons/HomeLogo.png";
 
 const Create = () => {
     const [image, setImage] = useState('');
@@ -34,7 +35,7 @@ const Create = () => {
     return (
         <div className="create">
             <div className="create-container">
-                <h1>HOME</h1>
+            <img src={Logo} alt="Logo" className="signin-logo" />
                 <form onSubmit={handleSubmit}>
 
                     <input 
