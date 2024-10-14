@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 5% 2% 5%;
+  padding: 1% 5% 2% 5%;
   width: 760px;
   box-sizing: border-box;
   height: auto;
@@ -169,4 +169,18 @@
 .signup-container .option2 p {
   color: #FFF;
   font-size: 14px;
+}
+
+.signup-container .close-button11 {
+  position: absolute;
+  top: -35px;   /* Adjust this value to move the button vertically */
+  right: 165px; /* Adjust this value to move the button horizontally */
+  background: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: #fff; /* White color */
+  font-size: 50px; /* Size of the close icon */
+  cursor: pointer; /* Pointer cursor */
+  outline: none; /* Remove outline on focus */
+  transition: color 0.3s; /* Smooth color transition */
+  border: #ddd;
 }

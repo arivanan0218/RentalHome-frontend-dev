@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Logo from "../src/assets/icons/HomeLogo.png";
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     const [username, setUsername] = useState('');
@@ -61,10 +62,11 @@ const Signup = () => {
 
     return (
         <div className="signup-container">
+            <Link to="/dashboard"> <button className="close-button11">×</button></Link>
             <img src={Logo} alt="Logo" className="signin-logo" />
             <p>Our user-friendly platform makes finding affordable rental homes simple and secure. <br />Join today and start your search for the perfect boarding!</p>
             <form onSubmit={handleSignup} className='signup-form'>
-                
+            
                 <input
                     type="text"
                     placeholder="First Name" // New input for first name

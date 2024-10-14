@@ -10,7 +10,13 @@
   }
   
   /* Styling for the logo image */
-  .logo {
+  .navbar .logo {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+  }
+
+  .navbar .logo11 {
     width: 39px;
     height: 39px;
     flex-shrink: 0;

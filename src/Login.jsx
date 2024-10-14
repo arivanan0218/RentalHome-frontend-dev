@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import qs from 'qs'; // Import qs to handle URL-encoded data
 import "./Login.css";
 import Logo from "../src/assets/icons/HomeLogo.png";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -63,6 +64,7 @@ const Login = () => {
 
     return (
         <div className="signup-container">
+            <Link to="/dashboard"> <button className="close-button11">×</button></Link>
             <img src={Logo} alt="Logo" className="signin-logo" />
             <p>Our user-friendly platform makes finding affordable rental homes simple and secure. <br />Join today and start your search for the perfect boarding!</p>
 

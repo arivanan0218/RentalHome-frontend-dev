@@ -35,7 +35,7 @@ const Header = ({ userType }) => {
         )}
         {userType && (
           <Link to="/logout">
-            <img src={Logout} alt="Logo" className="logo1" />
+            <img src={Logout} alt="Logo" className="logo11" />
           </Link>
         )}
       </div>
