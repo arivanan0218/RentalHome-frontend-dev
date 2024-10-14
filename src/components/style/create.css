@@ -94,7 +94,7 @@ input[type="number"] {
 .create-form .close-button1 {
   position: absolute;
   top: -90px;   /* Adjust this value to move the button vertically */
-  right: -80px; /* Adjust this value to move the button horizontally */
+  right: -30px; /* Adjust this value to move the button horizontally */
   background: transparent; /* Transparent background */
   border: none; /* No border */
   color: #fff; /* White color */
